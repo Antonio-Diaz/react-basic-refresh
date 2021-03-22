@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import  CustomButton  from "../Custom-button/Custom-button";
 
 const Product = ({ product, products, shoppingCart, setShoppingCart }) => {
   const { id, name, price } = product;
@@ -19,13 +20,13 @@ const Product = ({ product, products, shoppingCart, setShoppingCart }) => {
       <h2>{name}</h2>
       <p>{price}</p>
       {products ? (
-        <button type="button" onClick={() => handleSelectProduct(id)}>
+        <CustomButton type="button" onClick={() => handleSelectProduct(id)}>
           Purchase
-        </button>
+        </CustomButton>
       ) : (
-        <button type="button" onClick={() => handleRemoveProduct(id)}>
+        <CustomButton type="button" onClick={() => handleRemoveProduct(id)}>
           Remove
-        </button>
+        </CustomButton>
       )}
     </Fragment>
   );

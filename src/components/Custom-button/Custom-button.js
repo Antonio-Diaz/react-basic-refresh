@@ -1,10 +1,11 @@
-import React from 'react'
+import React from "react";
 
-export const CustomButton = () => {
-    
-    return (
-        <button>
-            
-        </button>
-    )
-}
+const CustomButton = ({ children, ...otherProps }) => {
+  return (
+    <button type="button" {...otherProps}>
+      {children}
+    </button>
+  );
+};
+
+export default CustomButton;
